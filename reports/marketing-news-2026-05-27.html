@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Marketing News - 2026-05-27</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #16202a;
+      --muted: #5b6673;
+      --line: #d8dee6;
+      --bg: #f7f8fa;
+      --panel: #ffffff;
+      --accent: #0f766e;
+      --accent-2: #b45309;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    header {
+      padding: 36px min(6vw, 56px) 24px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 44px); letter-spacing: 0; }
+    .lead { max-width: 920px; margin: 0; color: var(--muted); }
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .stats span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 10px;
+      background: #fff;
+    }
+    main { padding: 24px min(6vw, 56px) 48px; }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 22px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+    .field-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    label {
+      display: grid;
+      gap: 5px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    select {
+      min-width: 180px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      padding: 8px 34px 8px 10px;
+    }
+    .result-count {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .genre-section { margin-bottom: 28px; }
+    .genre-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin: 0 0 12px;
+      font-size: 21px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+    .genre-heading span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+      gap: 16px;
+    }
+    .news-card {
+      min-height: 260px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      background: var(--panel);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    h2 { margin: 0; font-size: 18px; line-height: 1.45; letter-spacing: 0; }
+    a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+    p { margin: 0; color: #34404d; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+    .tags span {
+      color: #0f3f3a;
+      background: #e7f4f1;
+      border: 1px solid #b7ddd6;
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .failures {
+      margin-top: 24px;
+      padding: 16px 18px;
+      border: 1px solid #f1c27d;
+      border-radius: 8px;
+      background: #fff8ed;
+      color: #5a3908;
+    }
+    .failures h2 { font-size: 16px; margin-bottom: 8px; }
+    .empty {
+      padding: 24px;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--muted);
+    }
+    @media (max-width: 640px) {
+      header { padding-top: 24px; }
+      .toolbar { align-items: stretch; }
+      .field-row, label, select { width: 100%; }
+      .meta { flex-direction: column; gap: 2px; }
+      .news-card { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily Marketing News</h1>
+    <p class="lead">マーケティング、広告、SEO、SNS、MarTech、AI活用に関する直近ニュースを、公式RSSとニュース検索から収集した日次ダイジェストです。</p>
+    <div class="stats">
+      <span>Generated: 2026-05-27 05:55 JST</span>
+      <span>Items: 24</span>
+      <span>Signals: AI: 17 / SEO: 10 / SNS: 9 / EC: 6 / 広告: 6 / Marketing: 3</span>
+    </div>
+  </header>
+  <main>
+    <section class="toolbar" aria-label="表示設定">
+      <div class="field-row">
+        <label>
+          ジャンル
+          <select id="genre-filter">
+            <option value="all">すべて</option>
+            <option value="AI">AI (17)</option>
+<option value="SEO">SEO (10)</option>
+<option value="SNS">SNS (9)</option>
+<option value="EC">EC (6)</option>
+<option value="広告">広告 (6)</option>
+<option value="Marketing">Marketing (3)</option>
+<option value="データ">データ (2)</option>
+          </select>
+        </label>
+        <label>
+          並び順
+          <select id="sort-order">
+            <option value="score">おすすめ順</option>
+            <option value="newest">新着順</option>
+            <option value="source">媒体順</option>
+          </select>
+        </label>
+      </div>
+      <div class="result-count" id="result-count">24件表示</div>
+    </section>
+    <template id="cards-template">
+        <article class="news-card" data-primary="AI" data-tags="AI|SNS|広告" data-score="77" data-published="2026-05-26T19:23:00+00:00" data-source="google news jp: marketing">
+          <div class="meta"><span>Google News JP: Marketing</span><span>05/27 04:23</span></div>
+          <h2><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxNX2lTVWFOX2oxRFF6UmtkdzBYVjlRRHh4aExuM29CWUpkX054MXotZHlfZlAwaEhhcXU4dDMzS3dQYjBZai01LXhTRExud0pCYWlGQkRLd1pqNzhMY0lTb1lzT3JkY0trSFBNZ1ZHVHNfd3VCcV96WndVamkyUWJ4Q3BxNGJVU2c?oc=5" target="_blank" rel="noopener noreferrer">OpenAIがServiceNowのCMOフレミング氏をビジネスマーケティング責任者に採用 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース</a></h2>
+          <p>OpenAIがServiceNowのCMOフレミング氏をビジネスマーケティング責任者に採用 Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース</p>
+          <div class="tags"><span>AI</span><span>SNS</span><span>広告</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="AI" data-tags="AI|SEO|SNS" data-score="69" data-published="2026-05-26T01:00:00+00:00" data-source="web担当者forum">
+          <div class="meta"><span>Web担当者Forum</span><span>05/26 10:00</span></div>
+          <h2><a href="https://webtan.impress.co.jp/e/2026/05/26/52695" target="_blank" rel="noopener noreferrer">6月第1週【6/1～6/5】 マーケティング、SNS、ECなど各社Webセミナー情報まとめ 40件</a></h2>
+          <p>6/1（月）～6/5（金）のマーケティング、SEO、データ分析、ECなどに関するセミナー・イベントを紹介します。時系列、順不同です。 この他社セミナーまとめは、「 Web担ウィークリー 」で紹介しきれなかったものです。「Web担ウィークリー」は、毎週月曜日に届きます。内容は、編集部が厳選した他社セミナー情報に加えて、先週公開された解説記事、ニュース記事を合わせて10本紹介しています。それ以外にも、読者プレゼント、Web担主催セミナー情報...</p>
+          <div class="tags"><span>AI</span><span>SEO</span><span>SNS</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="AI" data-tags="AI|SEO|EC" data-score="68" data-published="2026-05-26T18:05:55+00:00" data-source="search engine land">
+          <div class="meta"><span>Search Engine Land</span><span>05/27 03:05</span></div>
+          <h2><a href="https://searchengineland.com/sundar-pichai-google-search-ai-agents-tools-one-product-478726" target="_blank" rel="noopener noreferrer">Sundar Pichai: Google Search, AI agents, and tools will become one</a></h2>
+          <p>Google CEO says AI will reshape Search into a task-running system, even as Google insists it will keep linking users to the open web.</p>
+          <div class="tags"><span>AI</span><span>SEO</span><span>EC</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="AI" data-tags="AI|SEO|広告" data-score="67" data-published="2026-05-26T17:41:16+00:00" data-source="search engine land">
+          <div class="meta"><span>Search Engine Land</span><span>05/27 02:41</span></div>
+          <h2><a href="https://searchengineland.com/google-folds-display-ads-into-demand-gen-campaigns-478727" target="_blank" rel="noopener noreferrer">Google folds Display Ads into Demand Gen campaigns</a></h2>
+          <p>Google is giving Display ads advertisers access to broader reach, AI-powered optimization and newer Demand Gen features.</p>
+          <div class="tags"><span>AI</span><span>SEO</span><span>広告</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="AI" data-tags="AI|広告" data-score="65" data-published="2026-05-26T20:00:00+00:00" data-source="google news jp: marketing">
+          <div class="meta"><span>Google News JP: Marketing</span><span>05/27 05:00</span></div>
+          <h2><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNTDQ4RnllbnVtTTF6RzJZMlAwM1dPOVFKQVpJYzVnV255VWxUNDM5QTNoRTVUdDlyOHRUcEQxSEpRNHZXVmNIWFNmdzk4N1A5ODJIc1I1VlB0R1BmeFdkNXloVjllMHl0VFNCME11QUdJbEY0dWMwTFN6Z0x1alQ1eGNLb3V1MERfUnlxWg?oc=5" target="_blank" rel="noopener noreferrer">広告にAIエージェント下克上 巨大テック支配は終わるか - 日本経済新聞</a></h2>
+          <p>広告にAIエージェント下克上 巨大テック支配は終わるか 日本経済新聞</p>
+          <div class="tags"><span>AI</span><span>広告</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="AI" data-tags="AI|SEO|広告" data-score="64" data-published="2026-05-26T14:46:46+00:00" data-source="search engine land">
+          <div class="meta"><span>Search Engine Land</span><span>05/26 23:46</span></div>
+          <h2><a href="https://searchengineland.com/googles-latest-ai-ad-push-shows-ads-are-becoming-conversations-not-clicks-478695" target="_blank" rel="noopener noreferrer">Google’s latest AI ad push shows ads are becoming conversations, not clicks</a></h2>
+          <p>Google’s latest AI ad updates revealed major shifts and raises big questions about visibility, trust, and the future role of marketers.</p>
+          <div class="tags"><span>AI</span><span>SEO</span><span>広告</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="AI" data-tags="AI|SEO|EC" data-score="64" data-published="2026-05-26T14:29:50+00:00" data-source="search engine land">
+          <div class="meta"><span>Search Engine Land</span><span>05/26 23:29</span></div>
+          <h2><a href="https://searchengineland.com/google-nick-fox-ai-search-deeper-content-478686" target="_blank" rel="noopener noreferrer">Google’s Nick Fox: AI search rewards content that goes deeper</a></h2>
+          <p>As AI answers simple search queries, Google says you need richer human perspectives AI summaries can’t replace.</p>
+          <div class="tags"><span>AI</span><span>SEO</span><span>EC</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="AI" data-tags="AI|広告|データ" data-score="61" data-published="2026-05-26T08:00:02+00:00" data-source="google news jp: marketing">
+          <div class="meta"><span>Google News JP: Marketing</span><span>05/26 17:00</span></div>
+          <h2><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1BbUlwUEI4anphamNEakV1OHlZN1E2b3oyUlpFUkZ5MFpMZ3lYcEpSZWpsWklWNWRNWERvZTZvY2hDX2NkQmV2ZjhWcjBYLVRyWTI1dkozX0N3MG5jclBxVTlHMzJqLWNoQnc?oc=5" target="_blank" rel="noopener noreferrer">「鉄道×気象」データ活用の新広告サービス「Railcast Ads」JR 西日本とルグランが共同開発、提供開始 - PR TIMES</a></h2>
+          <p>「鉄道×気象」データ活用の新広告サービス「Railcast Ads」JR 西日本とルグランが共同開発、提供開始 PR TIMES</p>
+          <div class="tags"><span>AI</span><span>広告</span><span>データ</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="AI" data-tags="AI|SNS" data-score="60" data-published="2026-05-26T15:33:47+00:00" data-source="google news jp: marketing">
+          <div class="meta"><span>Google News JP: Marketing</span><span>05/27 00:33</span></div>
+          <h2><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTFB5dUJLQ1diT1lJckZhWXJmbjhvTHBDVi1PcFFYeEZTcXJPVll4RmhRMHlkeHFiU0tZSkx1dWhZRTI2dlhtMVhPLXZwdmZPM3ZRV0JmZ2xUNk1paVhtenZQZzM4TXZtc1ZlczV0NVRNUG5RNG5rOEE?oc=5" target="_blank" rel="noopener noreferrer">選挙の公正確保を〝虚偽〟SNS対策が判明、AI生成動画像に改変表示義務付け 与野党案 - 産経ニュース</a></h2>
+          <p>選挙の公正確保を〝虚偽〟SNS対策が判明、AI生成動画像に改変表示義務付け 与野党案 産経ニュース</p>
+          <div class="tags"><span>AI</span><span>SNS</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="SEO" data-tags="SEO|データ|EC" data-score="58" data-published="2026-05-26T13:44:59+00:00" data-source="search engine land">
+          <div class="meta"><span>Search Engine Land</span><span>05/26 22:44</span></div>
+          <h2><a href="https://searchengineland.com/google-search-console-links-report-showing-old-data-after-breaking-478687" target="_blank" rel="noopener noreferrer">Google Search Console links report showing old data after breaking</a></h2>
+          <p>Google Search Console&#x27;s link report broke last Thursday so Google decided to show old data from weeks ago, while it is being fixed.</p>
+          <div class="tags"><span>SEO</span><span>データ</span><span>EC</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="AI" data-tags="AI|SNS" data-score="57" data-published="2026-05-26T12:30:03+00:00" data-source="google news jp: marketing">
+          <div class="meta"><span>Google News JP: Marketing</span><span>05/26 21:30</span></div>
+          <h2><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE5ZN2RYRm1NV2UybWJaZGRES2lJRUw2UXg2MXJITHV3ZVQ4V3pKY05yb0ZLRFM5c3NDZkZfMnBOVG5BOFBxWlBEa1JmXzJjMTFvS0pkVjBYcWFXU2hOUHVFNVBYVQ?oc=5" target="_blank" rel="noopener noreferrer">AI画像、生成・改変表示義務化 SNS選挙の法改正案骨子 - nippon.com</a></h2>
+          <p>AI画像、生成・改変表示義務化 SNS選挙の法改正案骨子 nippon.com</p>
+          <div class="tags"><span>AI</span><span>SNS</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="AI" data-tags="AI|SNS" data-score="57" data-published="2026-05-26T12:29:00+00:00" data-source="google news jp: marketing">
+          <div class="meta"><span>Google News JP: Marketing</span><span>05/26 21:29</span></div>
+          <h2><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOSnN0VFlhbllzMzJHckdFQ0QzNEtqUk16WGdGdy14WVJOWjYzM0VYblNGSEJEaWtrVXB6cUJ3em9vRHpkRVJoZ0tOZDdFa3ZNMmI2MlRvc0Zqa0RYLThsbXdwVHlYcTdqODZkeURDNmtBc3k4WDAyanhCQ0VwNTlmRzZ2RXowbExFM3lUXzVn0gGTAUFVX3lxTE96ZXlDa0luVHhZQ3NKM2RqY3hRZ1pBeG1nM2ZRSkJybkZFZUotdkRORlFkd18tT1F1RF85QmVKZFcwUWgxTlNKT0xETGUyUV94TDEwdkJsbm9vZVFWbU5CNG5SMkxTTFRhaUt1S0xpaDlaNGhUNHFuZnlBUFhmbThaeVRtWEtzaVUzd21RRUFIUWY1OA?oc=5" target="_blank" rel="noopener noreferrer">AI画像、生成・改変表示義務化 SNS選挙の法改正案骨子 - ｄメニューニュース</a></h2>
+          <p>AI画像、生成・改変表示義務化 SNS選挙の法改正案骨子 ｄメニューニュース</p>
+          <div class="tags"><span>AI</span><span>SNS</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="AI" data-tags="AI|SEO|EC" data-score="57" data-published="2026-05-26T12:00:00+00:00" data-source="search engine land">
+          <div class="meta"><span>Search Engine Land</span><span>05/26 21:00</span></div>
+          <h2><a href="https://searchengineland.com/localized-ai-search-optimization-playbook-478499" target="_blank" rel="noopener noreferrer">The new playbook for localized AI search optimization</a></h2>
+          <p>Learn how to influence the reviews, citations, and third-party mentions AI search engines use in local business recommendations.</p>
+          <div class="tags"><span>AI</span><span>SEO</span><span>EC</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="AI" data-tags="AI|SNS" data-score="55" data-published="2026-05-26T18:05:09+00:00" data-source="google news en: digital marketing">
+          <div class="meta"><span>Google News EN: Digital Marketing</span><span>05/27 03:05</span></div>
+          <h2><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE9qZHdDX0RVTlZuNVVPdURXc3BWN2VOeUNPX1lDRXJWbXNxeHNuNDMzbFJGakl4YW5wQTFVOHNJaS1Rd1kwVU53NkdUNV9BaXI5bFB4WkExMVZsMWNGbjFBSHJxaVFCVE1rS1lfSDVn?oc=5" target="_blank" rel="noopener noreferrer">London Hospitality Social Summit 2026 Set to Transform Hotel, Restaurant and Resort Marketing with AI Learning, Strategy Labs and Global Booking Growth: All You Need to Know - Travel And Tour World</a></h2>
+          <p>London Hospitality Social Summit 2026 Set to Transform Hotel, Restaurant and Resort Marketing with AI Learning, Strategy Labs and Global Booking Growth: All You Need to Know Travel And Tour World</p>
+          <div class="tags"><span>AI</span><span>SNS</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="AI" data-tags="AI|SEO" data-score="53" data-published="2026-05-26T11:00:03+00:00" data-source="hubspot marketing blog">
+          <div class="meta"><span>HubSpot Marketing Blog</span><span>05/26 20:00</span></div>
+          <h2><a href="https://blog.hubspot.com/marketing/what-ai-overviews-mean-for-seo" target="_blank" rel="noopener noreferrer">What AI Overviews mean for SEO &amp; website traffic</a></h2>
+          <p>If you’re worried about what AI Overviews mean for SEO, let me remind you of the panic over featured snippets circa 2017. Remember how that turned out? At first, bloggers and SEOs bristled over these quick-glance summari...</p>
+          <div class="tags"><span>AI</span><span>SEO</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="Marketing" data-tags="Marketing" data-score="52" data-published="2026-05-26T20:37:30+00:00" data-source="google news jp: marketing">
+          <div class="meta"><span>Google News JP: Marketing</span><span>05/27 05:37</span></div>
+          <h2><a href="https://news.google.com/rss/articles/CBMifkFVX3lxTFB2ODdKR3RVaUpVZXdOVkpDUkJrWEJ5dng0aUtfTmt6ZHp1N2EyT0pYVEt4cEs1VzBOY0ZkU0NCNTFIWUFGcmlPcl9aZXIyUDN3TWRDOHRmRGxkWXJieUROdTBfWjM3eEFSck54emxvRnB6S1c0d1lXUnNOV19wdw?oc=5" target="_blank" rel="noopener noreferrer">【日本ダービー】ＳＮＳで大バズリの現役お坊さんの推し馬は…「はい、ピンときました」お釈迦様と同じ誕生日！ - au Webポータル</a></h2>
+          <p>【日本ダービー】ＳＮＳで大バズリの現役お坊さんの推し馬は…「はい、ピンときました」お釈迦様と同じ誕生日！ au Webポータル</p>
+          <div class="tags"><span>Marketing</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="Marketing" data-tags="Marketing" data-score="52" data-published="2026-05-26T20:30:00+00:00" data-source="google news jp: marketing">
+          <div class="meta"><span>Google News JP: Marketing</span><span>05/27 05:30</span></div>
+          <h2><a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE9JVTg1bEpadmtSNjBYOS1GRXl4TjUtcWV5bFY3VDdrMndWZDBhWGVDa1laRkRaM1V1eEVRTERnWnRwRWd0dVk0?oc=5" target="_blank" rel="noopener noreferrer">【日本ダービー】ＳＮＳで大バズリの現役お坊さんの推し馬は…「はい、ピンときました」お釈迦様と同じ誕生日！ - スポーツブル</a></h2>
+          <p>【日本ダービー】ＳＮＳで大バズリの現役お坊さんの推し馬は…「はい、ピンときました」お釈迦様と同じ誕生日！ スポーツブル</p>
+          <div class="tags"><span>Marketing</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="広告" data-tags="広告" data-score="52" data-published="2026-05-26T20:27:45+00:00" data-source="google news jp: marketing">
+          <div class="meta"><span>Google News JP: Marketing</span><span>05/27 05:27</span></div>
+          <h2><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5Yd0pEVEV2MC1QYjhRYS1LLUVaTnpsS1hwM0lkcEd5UWhSNlZrWTMtaXJYMVRJVFZfZzZaWFAxM0Iyczd2ZHdFQjgwTGI1R0tCS2hvdE4tSlY?oc=5" target="_blank" rel="noopener noreferrer">全面広告・東西アス - 建設通信新聞Digital</a></h2>
+          <p>全面広告・東西アス 建設通信新聞Digital</p>
+          <div class="tags"><span>広告</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="SNS" data-tags="SNS" data-score="52" data-published="2026-05-26T20:00:00+00:00" data-source="google news jp: marketing">
+          <div class="meta"><span>Google News JP: Marketing</span><span>05/27 05:00</span></div>
+          <h2><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFBVTEVucEpDRHVnei1nY09aWnEzU0hrbjJrTjNSYjFjd3dmMHZ3ZFpHUlF4ZV8wLWQyRDFKQlpsZFk1MDZxLTVrOVBvQlZRdy1xOHVEOHFVb2w?oc=5" target="_blank" rel="noopener noreferrer">「モテる」目指す知的障害者サークルにSNSで批判 「投稿者は正義だと思っている」一体なぜ？ - 京都新聞デジタル</a></h2>
+          <p>「モテる」目指す知的障害者サークルにSNSで批判 「投稿者は正義だと思っている」一体なぜ？ 京都新聞デジタル</p>
+          <div class="tags"><span>SNS</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="Marketing" data-tags="Marketing" data-score="52" data-published="2026-05-26T20:00:00+00:00" data-source="google news jp: marketing">
+          <div class="meta"><span>Google News JP: Marketing</span><span>05/27 05:00</span></div>
+          <h2><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE80amJOTVRrRnEwOWV6V1dkdTRHN3doQ05IOWRSZjJzWVRNelRoQldCb1dlaUFUNW9GUlVaSEpiVnl1dzRYb3dIdjV3d0tSQm1xY1RISTVWQlVFcmcy?oc=5" target="_blank" rel="noopener noreferrer">社外秘、若手社員らが流出 ２分以内の投稿促すＳＮＳ「ＢｅＲｅａｌ」 - 朝日新聞</a></h2>
+          <p>社外秘、若手社員らが流出 ２分以内の投稿促すＳＮＳ「ＢｅＲｅａｌ」 朝日新聞</p>
+          <div class="tags"><span>Marketing</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="AI" data-tags="AI|EC" data-score="52" data-published="2026-05-26T11:00:00-04:00" data-source="marketing dive">
+          <div class="meta"><span>Marketing Dive</span><span>05/27 00:00</span></div>
+          <h2><a href="https://www.marketingdive.com/news/essentia-takes-rule-defying-campaign-national-for-summer-season/821077/" target="_blank" rel="noopener noreferrer">Essentia takes rule-defying campaign national for summer season</a></h2>
+          <p>After an initial launch in New York last year, “Change the Equation” is expanding through a 90-second brand film and partnership with a soccer star.</p>
+          <div class="tags"><span>AI</span><span>EC</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="AI" data-tags="AI|SEO|SNS" data-score="52" data-published="2026-05-25T01:00:00+00:00" data-source="web担当者forum">
+          <div class="meta"><span>Web担当者Forum</span><span>05/25 10:00</span></div>
+          <h2><a href="https://webtan.impress.co.jp/e/2026/05/25/52700" target="_blank" rel="noopener noreferrer">【Google公式】「巷に出回るGEO・AEOは不要」と断言！ 生成AI検索に効くSEOをドキュメント化【1週間まとめ】</a></h2>
+          <p>━━【この記事の目次】━━ 今回の要チェック記事 先週のニュース記事 他社主催のセミナー情報まとめ 編集後記 2026/05/16～2026/05/22 Web 担当者 Forum に掲載された情報を毎週一度、まとめてご紹介するこのコーナー、今回は解説記事 5 本とニュース記事 5 本です。 今週の担当は、四谷です。 AI検索を攻略しよう『AIで集客する仕組み ～クリックされない時代に選ばれるAI検索のセオリー～』を3名様にプレゼント ...</p>
+          <div class="tags"><span>AI</span><span>SEO</span><span>SNS</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="SNS" data-tags="SNS|EC" data-score="51" data-published="2026-05-26T19:05:18+00:00" data-source="google news en: digital marketing">
+          <div class="meta"><span>Google News EN: Digital Marketing</span><span>05/27 04:05</span></div>
+          <h2><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTFBEa3daa0NuSWFLNTdKNVA0ZnVkVENyWW9YdnR3ajdZZHV4MFRKUU41d1NvVld4RnVtZ25iYzFDemdBVVc5MzFFc2E2OG1kVWZDSW93NnhSNU85NmxZaVYwa2ZybjlXallKMGFUbHp3?oc=5" target="_blank" rel="noopener noreferrer">United Kingdom Travel Power Shift: London Summit Reveals How Hospitality Social Media Can Become a Revenue Machine - Travel And Tour World</a></h2>
+          <p>United Kingdom Travel Power Shift: London Summit Reveals How Hospitality Social Media Can Become a Revenue Machine Travel And Tour World</p>
+          <div class="tags"><span>SNS</span><span>EC</span></div>
+        </article>
+        
+
+        <article class="news-card" data-primary="AI" data-tags="AI|SEO" data-score="51" data-published="2026-05-26T14:00:00+00:00" data-source="search engine land">
+          <div class="meta"><span>Search Engine Land</span><span>05/26 23:00</span></div>
+          <h2><a href="https://searchengineland.com/interrupting-buyer-journeys-seo-strategy-478548" target="_blank" rel="noopener noreferrer">Interrupting buyer journeys: The SEO strategy hiding in plain sight</a></h2>
+          <p>Create SEO content that surfaces alternative solutions, captures high-intent traffic, and reaches users earlier in the buyer journey.</p>
+          <div class="tags"><span>AI</span><span>SEO</span></div>
+        </article>
+        </template>
+    <section id="genre-root">
+      <p class="empty">対象期間内のニュースが見つかりませんでした。</p>
+    </section>
+    
+  </main>
+  <script>
+    (() => {
+      const template = document.getElementById("cards-template");
+      const root = document.getElementById("genre-root");
+      const genreFilter = document.getElementById("genre-filter");
+      const sortOrder = document.getElementById("sort-order");
+      const resultCount = document.getElementById("result-count");
+      const cards = Array.from(template.content.querySelectorAll(".news-card"));
+
+      function compareCards(a, b) {
+        const order = sortOrder.value;
+        if (order === "newest") {
+          return Date.parse(b.dataset.published) - Date.parse(a.dataset.published);
+        }
+        if (order === "source") {
+          return a.dataset.source.localeCompare(b.dataset.source, "ja") ||
+            Date.parse(b.dataset.published) - Date.parse(a.dataset.published);
+        }
+        return Number(b.dataset.score) - Number(a.dataset.score) ||
+          Date.parse(b.dataset.published) - Date.parse(a.dataset.published);
+      }
+
+      function render() {
+        const selected = genreFilter.value;
+        const visible = cards
+          .filter((card) => selected === "all" || card.dataset.tags.split("|").includes(selected))
+          .sort(compareCards);
+        root.replaceChildren();
+        resultCount.textContent = `${visible.length}件表示`;
+
+        if (!visible.length) {
+          const empty = document.createElement("p");
+          empty.className = "empty";
+          empty.textContent = "このジャンルの記事はありません。";
+          root.append(empty);
+          return;
+        }
+
+        const groups = new Map();
+        for (const card of visible) {
+          const key = selected === "all" ? card.dataset.primary : selected;
+          if (!groups.has(key)) groups.set(key, []);
+          groups.get(key).push(card);
+        }
+
+        for (const [genre, groupCards] of groups) {
+          const section = document.createElement("section");
+          section.className = "genre-section";
+
+          const heading = document.createElement("h2");
+          heading.className = "genre-heading";
+          heading.textContent = genre;
+          const count = document.createElement("span");
+          count.textContent = `${groupCards.length}件`;
+          heading.append(count);
+
+          const grid = document.createElement("div");
+          grid.className = "grid";
+          for (const card of groupCards) grid.append(card);
+
+          section.append(heading, grid);
+          root.append(section);
+        }
+      }
+
+      genreFilter.addEventListener("change", render);
+      sortOrder.addEventListener("change", render);
+      render();
+    })();
+  </script>
+</body>
+</html>

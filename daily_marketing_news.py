@@ -474,6 +474,152 @@ def render_html(items: list[Item], failures: list[str], config: dict, now: datet
 """
 
 
+def render_index(config: dict, now: datetime, archive_names: list[str]) -> str:
+    generated = now.strftime("%Y-%m-%d %H:%M %Z")
+    archive_links = "\n".join(
+        f'<li><a href="reports/{escape(name)}">{escape(name)}</a></li>'
+        for name in archive_names
+    )
+    return f"""<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Marketing News</title>
+  <style>
+    :root {{
+      color-scheme: light;
+      --ink: #16202a;
+      --muted: #5b6673;
+      --line: #d8dee6;
+      --bg: linear-gradient(180deg, #f5f8fb 0%, #eef3f1 100%);
+      --panel: rgba(255, 255, 255, 0.92);
+      --accent: #0f766e;
+      --accent-strong: #115e59;
+    }}
+    * {{ box-sizing: border-box; }}
+    body {{
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }}
+    main {{
+      width: min(960px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 48px 0 72px;
+    }}
+    .hero {{
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--panel);
+      box-shadow: 0 20px 60px rgba(22, 32, 42, 0.08);
+      backdrop-filter: blur(10px);
+    }}
+    h1 {{
+      margin: 0 0 12px;
+      font-size: clamp(34px, 6vw, 56px);
+      line-height: 1.05;
+    }}
+    p {{
+      margin: 0;
+      line-height: 1.7;
+      color: #34404d;
+    }}
+    .meta {{
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }}
+    .actions {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }}
+    .button {{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+    }}
+    .button-primary {{
+      background: var(--accent);
+      color: #fff;
+    }}
+    .button-primary:hover {{
+      background: var(--accent-strong);
+    }}
+    .button-secondary {{
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: #fff;
+    }}
+    section {{
+      margin-top: 24px;
+      padding: 28px 32px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.88);
+    }}
+    h2 {{
+      margin: 0 0 12px;
+      font-size: 20px;
+    }}
+    ul {{
+      margin: 0;
+      padding-left: 20px;
+    }}
+    li + li {{
+      margin-top: 8px;
+    }}
+    a {{
+      color: var(--accent-strong);
+      text-underline-offset: 3px;
+    }}
+    @media (max-width: 640px) {{
+      main {{
+        width: min(960px, calc(100vw - 24px));
+        padding-top: 24px;
+      }}
+      .hero, section {{
+        padding: 22px;
+        border-radius: 16px;
+      }}
+      .actions {{
+        flex-direction: column;
+      }}
+    }}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <h1>Daily Marketing News</h1>
+      <p>マーケティング、広告、SEO、SNS、MarTech、AI活用の直近ニュースを日次でまとめています。GitHub Pages ではこのページを入口にして、最新レポートと過去アーカイブにアクセスできます。</p>
+      <div class="meta">Generated: {escape(generated)}</div>
+      <div class="actions">
+        <a class="button button-primary" href="reports/latest.html">最新レポートを見る</a>
+        <a class="button button-secondary" href="reports/{escape(archive_names[0])}">本日分アーカイブ</a>
+      </div>
+    </section>
+    <section>
+      <h2>アーカイブ</h2>
+      <ul>
+        {archive_links}
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
+"""
+
+
 def main() -> int:
     config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     tz = ZoneInfo(config.get("timezone", "Asia/Tokyo"))
@@ -499,8 +645,18 @@ def main() -> int:
     html = render_html(items, failures, config, now)
     dated.write_text(html, encoding="utf-8")
     latest.write_text(html, encoding="utf-8")
+    archive_names = sorted(
+        (
+            path.name for path in output_dir.glob("marketing-news-*.html")
+            if path.is_file()
+        ),
+        reverse=True,
+    )
+    index = ROOT / "index.html"
+    index.write_text(render_index(config, now, archive_names), encoding="utf-8")
     print(f"Wrote {dated}")
     print(f"Wrote {latest}")
+    print(f"Wrote {index}")
     print(f"Items: {len(items)}; failures: {len(failures)}")
     return 0 if items else 1
 

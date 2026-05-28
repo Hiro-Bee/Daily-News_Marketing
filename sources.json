@@ -1,0 +1,48 @@
+{
+  "timezone": "Asia/Tokyo",
+  "output_dir": "reports",
+  "max_items": 24,
+  "lookback_hours": 48,
+  "sources": [
+    {
+      "name": "MarkeZine",
+      "category": "JP Marketing",
+      "url": "https://markezine.jp/rss/new/20/index.xml"
+    },
+    {
+      "name": "Web担当者Forum",
+      "category": "JP Digital Marketing",
+      "url": "https://webtan.impress.co.jp/rss.xml"
+    },
+    {
+      "name": "Marketing Dive",
+      "category": "Global Marketing",
+      "url": "https://www.marketingdive.com/feeds/news/"
+    },
+    {
+      "name": "Social Media Today",
+      "category": "Social / Platforms",
+      "url": "https://www.socialmediatoday.com/feeds/news/"
+    },
+    {
+      "name": "Search Engine Land",
+      "category": "SEO / Search",
+      "url": "https://searchengineland.com/feed"
+    },
+    {
+      "name": "HubSpot Marketing Blog",
+      "category": "Inbound / MarTech",
+      "url": "https://blog.hubspot.com/marketing/rss.xml"
+    },
+    {
+      "name": "Google News JP: Marketing",
+      "category": "JP News Search",
+      "url": "https://news.google.com/rss/search?q=%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%20OR%20%E5%BA%83%E5%91%8A%20OR%20SEO%20OR%20SNS%20when:2d&hl=ja&gl=JP&ceid=JP:ja"
+    },
+    {
+      "name": "Google News EN: Digital Marketing",
+      "category": "Global News Search",
+      "url": "https://news.google.com/rss/search?q=digital%20marketing%20OR%20advertising%20OR%20SEO%20OR%20social%20media%20when:2d&hl=en-US&gl=US&ceid=US:en"
+    }
+  ]
+}
